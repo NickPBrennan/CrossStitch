@@ -1,0 +1,154 @@
+/*
+
+Main Style Sheet
+
+Colors (Dark to Light):
+#1A2226
+#313A40
+#D9CDBF
+#F2E6D8
+#F2F2F2
+
+*/
+
+
+/* Base Styles */ 
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+/* Utility Classes */
+
+.text-primary {
+	color: #F2E6D8;
+}
+
+.text-align-bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+
+
+/*   Crossword  */
+.xword-grid {
+	display: grid;
+	grid-template-columns: repeat(15,2rem);
+	grid-template-rows: repeat(15,2rem);
+	border: 1px solid black;
+}
+
+.xword-block {
+	height: 2rem;
+	width: 2rem;
+	background: white;
+	border: 1px solid grey;
+	/*  Superscript support  */
+	display: grid;
+	grid-template-rows: 1fr 3fr;
+	grid-template-columns: 1fr;
+	align-items: stretch;
+
+}
+
+
+.current-orientation {
+	background: #F2E6D8;
+}
+
+.current-block {
+	background: #D9CDBF;
+}
+
+.grid-brick {
+	background: black; 
+}
+
+
+
+.xword-block p.numbering {
+	text-align: left;
+	font-size: 0.5rem;
+	line-height: 0.55rem
+	font-weight: bold;
+}
+
+.xword-block p.entry {
+	text-align: center;
+	font-size: 1.3rem;
+	color: #1A2226;
+	font-weight: bold;
+	font-family: 'Lora', serif;
+	line-height: 1.3rem
+
+}
+
+
+/*  Navbar */
+
+#navbar {
+	position: sticky;
+	top: 0;
+	background: #313A40;
+	color: #F2F2F2;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+	z-index: 1;
+}
+
+#navbar ul {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+
+#navbar ul li a {
+	color: #F2F2F2;
+	padding: 0.5rem;
+	margin:  0.25rem;
+}
+
+#navbar ul li a:hover {
+	background: #F2E6D8;
+	border-radius: 5px;
+	color: #313A40;
+}
+
+/* Application  */
+
+#application {
+	display: flex;
+	background: #F2F2F2;
+	padding: 1.7rem;
+	justify-content: center;
+	width: 100vw;
+}
+
+#main-xword {
+	flex: 1;
+	padding: 1.2rem;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+
