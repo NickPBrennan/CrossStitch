@@ -1,0 +1,11 @@
+web:
+  build: ./web
+  command: python -u app.py
+  ports:
+    - "5000:5000"
+  links:
+    - db
+  volumes: 
+    - ./web:/work
+db:
+  image: mongo:3.0.2
